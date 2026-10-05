@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Program History · Plymouth State Football</title>
+  <meta name="description" content="The history of Plymouth State Panthers football — from 1970 to today, including 14 conference titles, five NCAA playoff trips and College Football Hall of Famer Joe Dudek." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="scroll-progress" aria-hidden="true"></div>
+
+  <header class="nav">
+    <div class="nav-inner">
+      <a class="nav-brand" href="index.html"><img src="assets/img/logo.svg" alt="Plymouth State Panthers" /><span>Football</span></a>
+      <button class="nav-toggle" aria-label="Menu" aria-expanded="false"><span></span></button>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="schedule.html">Schedule</a>
+        <a href="opponents.html">Opponents</a>
+        <a href="history.html">History</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero hero--page">
+      <div class="hero-media" data-parallax="0.1" aria-hidden="true"><img src="assets/img/game-dean.jpg" alt="" /></div>
+      <div class="hero-veil" aria-hidden="true"></div>
+      <div class="container">
+        <span class="eyebrow reveal"><span class="dot"></span> Est. 1970 · Panther Field</span>
+        <h1 class="display sm reveal" data-delay="1" style="margin-top:20px">A Panther <span class="grad">Tradition</span></h1>
+        <p class="lede reveal" data-delay="2" id="historyBlurb">
+          From a three-game debut in 1970 to a College Football Hall of Famer and multiple conference championships.
+        </p>
+      </div>
+    </section>
+
+    <section class="section alt tight">
+      <div class="container">
+        <div class="stat-row" id="historyStats"></div>
+      </div>
+    </section>
+
+    <!-- =========================== TIMELINE =========================== -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="section-kicker">Through the years</div>
+          <h2 class="section-title">The eras of Panther football</h2>
+        </div>
+        <div class="timeline" id="timeline"></div>
+      </div>
+    </section>
+
+    <!-- ============================ DUDEK ============================= -->
+    <section class="section alt">
+      <div class="container">
+        <div class="hof" id="dudek"></div>
+      </div>
+    </section>
+
+    <!-- ========================= CHAMPIONSHIPS ======================== -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="section-kicker">Banners</div>
+          <h2 class="section-title">Conference championships</h2>
+          <p class="section-sub">Fourteen conference titles across the NEFC, FFC and MASCAC — plus a share of the 2025 MASCAC crown.</p>
+        </div>
+        <div class="table-wrap reveal scale">
+          <table class="data">
+            <thead><tr><th>Year</th><th>Conference</th><th style="text-align:left">Head coach</th><th>Record</th><th>Result</th></tr></thead>
+            <tbody id="champsBody"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================== PLAYOFFS =========================== -->
+    <section class="section alt">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="section-kicker">National stage</div>
+          <h2 class="section-title">NCAA playoff appearances</h2>
+          <p class="section-sub">Five trips to the Division III playoffs, including a run to the 1994 quarterfinals.</p>
+        </div>
+        <div class="table-wrap reveal scale">
+          <table class="data">
+            <thead><tr><th>Year</th><th style="text-align:left">Round</th><th style="text-align:left">Opponent</th><th>Result</th></tr></thead>
+            <tbody id="playoffsBody"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ VENUES ============================ -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="section-kicker">Home</div>
+          <h2 class="section-title">Where the Panthers play</h2>
+        </div>
+        <div class="venue-grid" id="venueGrid"></div>
+      </div>
+    </section>
+
+    <!-- ============================ COACHES =========================== -->
+    <section class="section alt">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="section-kicker">On the sideline</div>
+          <h2 class="section-title">Head coaches</h2>
+        </div>
+        <div class="table-wrap reveal scale">
+          <table class="data">
+            <thead><tr><th style="text-align:left">Coach</th><th>Seasons</th><th>Record</th><th style="text-align:left">Highlights</th></tr></thead>
+            <tbody id="coachesBody"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section tight">
+      <div class="container cta reveal">
+        <h2>The next chapter</h2>
+        <p>Follow the 2026 Panthers as they chase another conference title.</p>
+        <div class="btn-row">
+          <a class="btn primary" href="schedule.html">Schedule &amp; results</a>
+          <a class="btn ghost" href="index.html">Back home</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="brand">
+          <img src="assets/img/logo.svg" alt="Plymouth State Panthers" />
+          <p>An unofficial, fan-made dashboard for Plymouth State University football. Not affiliated with or endorsed by Plymouth State University or the MASCAC.</p>
+        </div>
+        <div>
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="schedule.html">Schedule &amp; results</a></li>
+            <li><a href="opponents.html">Opponent spotlight</a></li>
+            <li><a href="history.html">Program history</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Sources</h4>
+          <ul id="sourceList"></ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>History through the 2025 season. Photos: Plymouth State Athletics.</span>
+        <span>Built with plain HTML, CSS &amp; JavaScript.</span>
+      </div>
+    </div>
+  </footer>
+
+  <div class="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+    <button class="close" aria-label="Close">×</button>
+    <img src="" alt="" />
+  </div>
+
+  <script src="data.js"></script>
+  <script src="site.js"></script>
+</body>
+</html>

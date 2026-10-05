@@ -3,156 +3,179 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Plymouth State Football · 2026 Season</title>
-  <meta name="description" content="Unofficial dashboard for the Plymouth State University Panthers 2026 football season: schedule, results, stat leaders, MASCAC standings, and a featured player from every opponent." />
+  <title>Plymouth State Football · 2026</title>
+  <meta name="description" content="The Plymouth State University Panthers 2026 football season — schedule, results, stat leaders and program history." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <!-- ===================== HEADER ===================== -->
-  <header class="site-header" id="top">
-    <div class="container header-inner">
-      <a class="brand" href="#top">
-        <span class="brand-mark" aria-hidden="true">
-          <svg viewBox="0 0 48 48" width="34" height="34" role="img" aria-label="Football">
-            <ellipse cx="24" cy="24" rx="19" ry="12" fill="#2fbf6a"/>
-            <path d="M9 24h30" stroke="#0a0e0c" stroke-width="2.4" stroke-linecap="round"/>
-            <path d="M16 19v10M21 18.5v11M27 18.5v11M32 19v10" stroke="#eafff2" stroke-width="2" stroke-linecap="round"/>
-          </svg>
-        </span>
-        <span class="brand-text">
-          <strong>Plymouth State</strong>
-          <small>Football · 2026</small>
-        </span>
-      </a>
+  <div class="scroll-progress" aria-hidden="true"></div>
 
-      <nav class="main-nav" aria-label="Section navigation">
-        <a href="#overview">Overview</a>
-        <a href="#leaders">Leaders</a>
-        <a href="#schedule">Schedule</a>
-        <a href="#opponents">Opponents</a>
-        <a href="#standings">Standings</a>
+  <!-- ============================= NAV ============================= -->
+  <header class="nav">
+    <div class="nav-inner">
+      <a class="nav-brand" href="index.html">
+        <img src="assets/img/logo.svg" alt="Plymouth State Panthers" />
+        <span>Football</span>
+      </a>
+      <button class="nav-toggle" aria-label="Menu" aria-expanded="false"><span></span></button>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="schedule.html">Schedule</a>
+        <a href="opponents.html">Opponents</a>
+        <a href="history.html">History</a>
       </nav>
     </div>
   </header>
 
   <main>
-    <!-- ===================== HERO ===================== -->
-    <section class="hero" id="overview">
-      <div class="hero-glow" aria-hidden="true"></div>
-      <div class="container hero-inner">
-        <p class="eyebrow">NCAA Division III · MASCAC</p>
-        <h1>Panther Football <span>2026</span></h1>
-        <p class="hero-sub">
-          A fan's dashboard for the Plymouth State University season — results, stat
-          leaders, the conference race, and one player to watch from every opponent.
+    <!-- ============================= HERO ============================= -->
+    <section class="hero">
+      <div class="hero-media" data-parallax="0.14" aria-hidden="true">
+        <img src="assets/img/game-bsu.jpg" alt="" />
+      </div>
+      <div class="hero-veil" aria-hidden="true"></div>
+      <div class="container">
+        <span class="eyebrow reveal"><span class="dot"></span> 2026 Season · NCAA Division III · MASCAC</span>
+        <h1 class="display reveal" data-delay="1" style="margin-top:22px">
+          Panther<br /><span class="grad">Football</span>
+        </h1>
+        <p class="lede reveal" data-delay="2">
+          Every game, every leader and the story of a program — following Plymouth State
+          through the 2026 season and 55 years of Panthers football.
         </p>
+        <div class="btn-row reveal" data-delay="3">
+          <a class="btn primary" href="schedule.html">View the schedule</a>
+          <a class="btn ghost" href="history.html">Explore the history</a>
+        </div>
+      </div>
+      <div class="scroll-cue" aria-hidden="true"><span>Scroll</span><span class="line"></span></div>
+    </section>
 
-        <div class="record-strip" id="recordStrip" aria-label="Season record"></div>
+    <!-- ========================= SEASON STATS ========================= -->
+    <section class="section alt">
+      <div class="container">
+        <div class="section-head center reveal">
+          <div class="section-kicker">Season so far</div>
+          <h2 class="section-title">The 2026 Panthers at a glance</h2>
+          <p class="section-sub">Through four games, Plymouth State sits at .500 overall and is hunting another MASCAC title.</p>
+        </div>
+        <div class="stat-row" id="seasonStats"></div>
       </div>
     </section>
 
-    <!-- ===================== LEADERS ===================== -->
-    <section class="section" id="leaders">
+    <!-- =========================== FEATURE ============================ -->
+    <section class="section">
       <div class="container">
-        <div class="section-head">
-          <h2>Panther Stat Leaders</h2>
-          <p>Team leaders through four games of the 2026 season.</p>
+        <div class="feature reveal scale">
+          <img src="assets/img/game-dean.jpg" alt="Plymouth State defenders celebrate a sack against Dean" data-parallax="0.06" />
+          <div class="feature-body">
+            <span class="tag gold">Homecoming · Oct. 3, 2026</span>
+            <h3 style="margin-top:14px">Shut out on Homecoming</h3>
+            <p>
+              Senior TJ Taveras racked up 11 tackles, 3.5 tackles for loss and a sack as the
+              Panther defense blanked Dean 14–0 in front of a Homecoming crowd at Panther Field.
+            </p>
+          </div>
         </div>
-        <div class="leader-grid" id="leaderGrid"></div>
       </div>
     </section>
 
-    <!-- ===================== SCHEDULE ===================== -->
-    <section class="section alt" id="schedule">
+    <!-- ============================ LEADERS =========================== -->
+    <section class="section">
       <div class="container">
-        <div class="section-head">
-          <h2>Schedule &amp; Results</h2>
-          <p>Every game on the 2026 slate. Filter to narrow it down.</p>
+        <div class="section-head reveal">
+          <div class="section-kicker">Stat leaders</div>
+          <h2 class="section-title">The players setting the pace</h2>
         </div>
-
-        <div class="filter-bar" id="filterBar" role="tablist" aria-label="Filter schedule">
-          <button class="filter is-active" data-filter="all" role="tab" aria-selected="true">All games</button>
-          <button class="filter" data-filter="home" role="tab" aria-selected="false">Home</button>
-          <button class="filter" data-filter="away" role="tab" aria-selected="false">Away</button>
-          <button class="filter" data-filter="conf" role="tab" aria-selected="false">Conference</button>
-          <button class="filter" data-filter="played" role="tab" aria-selected="false">Played</button>
-        </div>
-
-        <div class="schedule-grid" id="scheduleGrid"></div>
+        <div class="card-grid" id="leadersGrid"></div>
       </div>
     </section>
 
-    <!-- ===================== OPPONENTS ===================== -->
-    <section class="section" id="opponents">
+    <!-- ======================== OPPONENT PREVIEW ====================== -->
+    <section class="section alt">
       <div class="container">
-        <div class="section-head">
-          <h2>Opponent Spotlight</h2>
-          <p>A player to know from every team on the Panthers' schedule — and what they've done this season.</p>
+        <div class="section-head reveal">
+          <div class="section-kicker">Opponent spotlight</div>
+          <h2 class="section-title">A player to know from every team</h2>
+          <p class="section-sub">Each week we highlight a standout from the Panthers' next opponent.</p>
         </div>
-        <div class="opponent-grid" id="opponentGrid"></div>
+        <div class="opp-grid" id="opponentPreview"></div>
+        <div class="btn-row reveal" style="margin-top:34px">
+          <a class="btn ghost" href="opponents.html">See all 10 teams →</a>
+        </div>
       </div>
     </section>
 
-    <!-- ===================== STANDINGS ===================== -->
-    <section class="section alt" id="standings">
-      <div class="container">
-        <div class="section-head">
-          <h2>MASCAC Standings</h2>
-          <p>The conference race, through October 5, 2026.</p>
+    <!-- =========================== HISTORY ============================ -->
+    <section class="section">
+      <div class="container two-col">
+        <div class="text-block reveal">
+          <div class="section-kicker">Since 1970</div>
+          <h2>A program with a Hall of Famer</h2>
+          <p>
+            Plymouth State football has produced 14 conference championships, five NCAA playoff
+            trips and one of the most decorated players in Division III history — Joe Dudek, who
+            broke Walter Payton's NCAA touchdown record and finished ninth in the 1985 Heisman vote.
+          </p>
+          <p style="margin-top:26px"><a class="btn primary" href="history.html">Read the full history</a></p>
         </div>
+        <div class="media reveal scale" data-delay="1">
+          <img src="assets/img/mascac-weekly.jpg" alt="Plymouth State MASCAC weekly honors graphic" data-zoom="assets/img/mascac-weekly.jpg" loading="lazy" />
+        </div>
+      </div>
+    </section>
 
-        <div class="standings-wrap">
-          <table class="standings">
-            <thead>
-              <tr>
-                <th scope="col" class="col-team">Team</th>
-                <th scope="col">Conf.</th>
-                <th scope="col">Overall</th>
-                <th scope="col" class="col-pct">Win %</th>
-              </tr>
-            </thead>
-            <tbody id="standingsBody"></tbody>
-          </table>
+    <!-- ============================= CTA ============================== -->
+    <section class="section alt tight">
+      <div class="container cta reveal">
+        <h2>One town. One team.<br />One more title run.</h2>
+        <p>Follow Plymouth State football all season long.</p>
+        <div class="btn-row">
+          <a class="btn primary" href="schedule.html">Schedule &amp; results</a>
+          <a class="btn ghost" href="opponents.html">Opponent spotlight</a>
         </div>
       </div>
     </section>
   </main>
 
-  <!-- ===================== FOOTER ===================== -->
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <div class="footer-about">
-        <div class="brand small">
-          <span class="brand-mark" aria-hidden="true">
-            <svg viewBox="0 0 48 48" width="26" height="26" role="img" aria-label="Football">
-              <ellipse cx="24" cy="24" rx="19" ry="12" fill="#2fbf6a"/>
-              <path d="M9 24h30" stroke="#0a0e0c" stroke-width="2.4" stroke-linecap="round"/>
-              <path d="M16 19v10M21 18.5v11M27 18.5v11M32 19v10" stroke="#eafff2" stroke-width="2" stroke-linecap="round"/>
-            </svg>
-          </span>
-          <span class="brand-text"><strong>Plymouth State</strong><small>Football · 2026</small></span>
+  <!-- ============================ FOOTER ============================ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="brand">
+          <img src="assets/img/logo.svg" alt="Plymouth State Panthers" />
+          <p>An unofficial, fan-made dashboard for Plymouth State University football. Not affiliated with or endorsed by Plymouth State University or the MASCAC.</p>
         </div>
-        <p class="disclaimer">
-          Unofficial, fan-made project. Not affiliated with or endorsed by Plymouth State
-          University or the MASCAC. Season stats current as of <span id="updated">October 5, 2026</span>.
-        </p>
+        <div>
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="schedule.html">Schedule &amp; results</a></li>
+            <li><a href="opponents.html">Opponent spotlight</a></li>
+            <li><a href="history.html">Program history</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Sources</h4>
+          <ul id="sourceList"></ul>
+        </div>
       </div>
-
-      <div class="footer-sources">
-        <h3>Sources</h3>
-        <ul id="sourceList"></ul>
+      <div class="footer-bottom">
+        <span>Stats current as of <span id="updated">October 5, 2026</span>. Photos: Plymouth State Athletics.</span>
+        <span>Built with plain HTML, CSS &amp; JavaScript.</span>
       </div>
-    </div>
-    <div class="container footer-bottom">
-      <span>Built with plain HTML, CSS &amp; JavaScript.</span>
-      <a href="#top">Back to top ↑</a>
     </div>
   </footer>
 
+  <div class="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+    <button class="close" aria-label="Close">×</button>
+    <img src="" alt="" />
+  </div>
+
   <script src="data.js"></script>
-  <script src="app.js"></script>
+  <script src="site.js"></script>
 </body>
 </html>

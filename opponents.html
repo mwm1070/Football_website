@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Opponent Spotlight · Plymouth State Football 2026</title>
+  <meta name="description" content="A player to watch from every team on the Plymouth State Panthers' 2026 football schedule." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="scroll-progress" aria-hidden="true"></div>
+
+  <header class="nav">
+    <div class="nav-inner">
+      <a class="nav-brand" href="index.html"><img src="assets/img/logo.svg" alt="Plymouth State Panthers" /><span>Football</span></a>
+      <button class="nav-toggle" aria-label="Menu" aria-expanded="false"><span></span></button>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="schedule.html">Schedule</a>
+        <a href="opponents.html">Opponents</a>
+        <a href="history.html">History</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero hero--page">
+      <div class="hero-media" data-parallax="0.1" aria-hidden="true"><img src="assets/img/mascac-weekly.jpg" alt="" /></div>
+      <div class="hero-veil" aria-hidden="true"></div>
+      <div class="container">
+        <span class="eyebrow reveal"><span class="dot"></span> Every team · Every week</span>
+        <h1 class="display sm reveal" data-delay="1" style="margin-top:20px">Opponent <span class="grad">Spotlight</span></h1>
+        <p class="lede reveal" data-delay="2">Ten teams. Ten players to know — and what each has accomplished this season.</p>
+      </div>
+    </section>
+
+    <section class="section" id="opponents">
+      <div class="container">
+        <div class="section-head reveal" style="display:flex;flex-wrap:wrap;gap:20px;align-items:flex-end;justify-content:space-between;max-width:none">
+          <div style="max-width:620px">
+            <div class="section-kicker">Player to watch</div>
+            <h2 class="section-title" style="font-size:clamp(26px,4vw,44px)">The standouts</h2>
+          </div>
+          <label style="display:grid;gap:8px;min-width:260px">
+            <span class="section-kicker" style="color:var(--dim)">Search</span>
+            <input id="oppSearch" type="search" placeholder="Team or player…" style="font:inherit;color:var(--text);background:var(--surface);border:1px solid var(--stroke);border-radius:980px;padding:12px 18px;outline:none" />
+          </label>
+        </div>
+
+        <div class="filter-bar reveal" id="oppFilter" role="tablist" aria-label="Filter opponents">
+          <button class="filter is-active" data-filter="all">All teams</button>
+          <button class="filter" data-filter="played">Played</button>
+          <button class="filter" data-filter="upcoming">Upcoming</button>
+          <button class="filter" data-filter="psu">Plymouth State</button>
+        </div>
+
+        <div class="opp-grid" id="opponentGrid"></div>
+      </div>
+    </section>
+
+    <section class="section alt tight">
+      <div class="container cta reveal">
+        <h2>See it in person</h2>
+        <p>Cheer on the Panthers at Panther Field this season.</p>
+        <div class="btn-row"><a class="btn primary" href="schedule.html">Schedule &amp; results</a></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="brand">
+          <img src="assets/img/logo.svg" alt="Plymouth State Panthers" />
+          <p>An unofficial, fan-made dashboard for Plymouth State University football. Not affiliated with or endorsed by Plymouth State University or the MASCAC.</p>
+        </div>
+        <div>
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="schedule.html">Schedule &amp; results</a></li>
+            <li><a href="opponents.html">Opponent spotlight</a></li>
+            <li><a href="history.html">Program history</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Sources</h4>
+          <ul id="sourceList"></ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>Stats current as of <span id="updated">October 5, 2026</span>. Photos: Plymouth State Athletics.</span>
+        <span>Built with plain HTML, CSS &amp; JavaScript.</span>
+      </div>
+    </div>
+  </footer>
+
+  <div class="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+    <button class="close" aria-label="Close">×</button>
+    <img src="" alt="" />
+  </div>
+
+  <script src="data.js"></script>
+  <script src="site.js"></script>
+</body>
+</html>
