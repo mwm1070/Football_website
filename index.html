@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Plymouth State Football · 2026 Season</title>
+  <meta name="description" content="Unofficial dashboard for the Plymouth State University Panthers 2026 football season: schedule, results, stat leaders, MASCAC standings, and a featured player from every opponent." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- ===================== HEADER ===================== -->
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="brand" href="#top">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 48 48" width="34" height="34" role="img" aria-label="Football">
+            <ellipse cx="24" cy="24" rx="19" ry="12" fill="#2fbf6a"/>
+            <path d="M9 24h30" stroke="#0a0e0c" stroke-width="2.4" stroke-linecap="round"/>
+            <path d="M16 19v10M21 18.5v11M27 18.5v11M32 19v10" stroke="#eafff2" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </span>
+        <span class="brand-text">
+          <strong>Plymouth State</strong>
+          <small>Football · 2026</small>
+        </span>
+      </a>
+
+      <nav class="main-nav" aria-label="Section navigation">
+        <a href="#overview">Overview</a>
+        <a href="#leaders">Leaders</a>
+        <a href="#schedule">Schedule</a>
+        <a href="#opponents">Opponents</a>
+        <a href="#standings">Standings</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===================== HERO ===================== -->
+    <section class="hero" id="overview">
+      <div class="hero-glow" aria-hidden="true"></div>
+      <div class="container hero-inner">
+        <p class="eyebrow">NCAA Division III · MASCAC</p>
+        <h1>Panther Football <span>2026</span></h1>
+        <p class="hero-sub">
+          A fan's dashboard for the Plymouth State University season — results, stat
+          leaders, the conference race, and one player to watch from every opponent.
+        </p>
+
+        <div class="record-strip" id="recordStrip" aria-label="Season record"></div>
+      </div>
+    </section>
+
+    <!-- ===================== LEADERS ===================== -->
+    <section class="section" id="leaders">
+      <div class="container">
+        <div class="section-head">
+          <h2>Panther Stat Leaders</h2>
+          <p>Team leaders through four games of the 2026 season.</p>
+        </div>
+        <div class="leader-grid" id="leaderGrid"></div>
+      </div>
+    </section>
+
+    <!-- ===================== SCHEDULE ===================== -->
+    <section class="section alt" id="schedule">
+      <div class="container">
+        <div class="section-head">
+          <h2>Schedule &amp; Results</h2>
+          <p>Every game on the 2026 slate. Filter to narrow it down.</p>
+        </div>
+
+        <div class="filter-bar" id="filterBar" role="tablist" aria-label="Filter schedule">
+          <button class="filter is-active" data-filter="all" role="tab" aria-selected="true">All games</button>
+          <button class="filter" data-filter="home" role="tab" aria-selected="false">Home</button>
+          <button class="filter" data-filter="away" role="tab" aria-selected="false">Away</button>
+          <button class="filter" data-filter="conf" role="tab" aria-selected="false">Conference</button>
+          <button class="filter" data-filter="played" role="tab" aria-selected="false">Played</button>
+        </div>
+
+        <div class="schedule-grid" id="scheduleGrid"></div>
+      </div>
+    </section>
+
+    <!-- ===================== OPPONENTS ===================== -->
+    <section class="section" id="opponents">
+      <div class="container">
+        <div class="section-head">
+          <h2>Opponent Spotlight</h2>
+          <p>A player to know from every team on the Panthers' schedule — and what they've done this season.</p>
+        </div>
+        <div class="opponent-grid" id="opponentGrid"></div>
+      </div>
+    </section>
+
+    <!-- ===================== STANDINGS ===================== -->
+    <section class="section alt" id="standings">
+      <div class="container">
+        <div class="section-head">
+          <h2>MASCAC Standings</h2>
+          <p>The conference race, through October 5, 2026.</p>
+        </div>
+
+        <div class="standings-wrap">
+          <table class="standings">
+            <thead>
+              <tr>
+                <th scope="col" class="col-team">Team</th>
+                <th scope="col">Conf.</th>
+                <th scope="col">Overall</th>
+                <th scope="col" class="col-pct">Win %</th>
+              </tr>
+            </thead>
+            <tbody id="standingsBody"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-about">
+        <div class="brand small">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 48 48" width="26" height="26" role="img" aria-label="Football">
+              <ellipse cx="24" cy="24" rx="19" ry="12" fill="#2fbf6a"/>
+              <path d="M9 24h30" stroke="#0a0e0c" stroke-width="2.4" stroke-linecap="round"/>
+              <path d="M16 19v10M21 18.5v11M27 18.5v11M32 19v10" stroke="#eafff2" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </span>
+          <span class="brand-text"><strong>Plymouth State</strong><small>Football · 2026</small></span>
+        </div>
+        <p class="disclaimer">
+          Unofficial, fan-made project. Not affiliated with or endorsed by Plymouth State
+          University or the MASCAC. Season stats current as of <span id="updated">October 5, 2026</span>.
+        </p>
+      </div>
+
+      <div class="footer-sources">
+        <h3>Sources</h3>
+        <ul id="sourceList"></ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span>Built with plain HTML, CSS &amp; JavaScript.</span>
+      <a href="#top">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
